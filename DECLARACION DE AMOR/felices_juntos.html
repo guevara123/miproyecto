@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Felices Juntos</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #b9246a;
+      font-family: 'Arial', sans-serif;
+      background-image: url('img/3.jpg'); /* Ruta de la imagen con fondo transparente */
+      background-size: 80%; /* Cambia el tamaño de la imagen para hacerla más grande */
+      background-position: center; /* Centra la imagen */
+      background-repeat: no-repeat; /* Evita que la imagen se repita */
+    }
+    #container {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.7); /* Fondo menos transparente, valor más alto */
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 600px;
+    }
+    h1 {
+      font-size: 36px;
+      color: #388e3c;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 22px;
+      color: #555;
+      margin: 20px 0;
+    }
+    .emoji {
+      font-size: 50px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      color: #deeff1;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>¡Felices Juntos 😍🍀! 💕</h1>
+    <p>Gracias por decir sí, mi amor. TE QUIERO 😘 señorita EVELYN CORDOVA GONZALES</p>
+    <div class="emoji">💖😊</div>
+    <button onclick="volverAlInicio()">Volver al inicio</button>
+  </div>
+
+  <script>
+    function volverAlInicio() {
+      window.location.href = "index.html"; // Redirige al inicio para comenzar nuevamente
+    }
+  </script>
+</body>
+</html>

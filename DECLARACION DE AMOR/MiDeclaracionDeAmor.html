@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Palabras de Amor</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #fce4ec;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+      position: relative;
+    }
+    #container {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 600px;
+      z-index: 2;
+    }
+    h1 {
+      font-size: 36px;
+      color: #e91e63;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 20px;
+      color: #555;
+    }
+    .mensaje {
+      font-size: 22px;
+      color: #e91e63;
+      margin: 20px 0;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #btnNo {
+      background-color: #f44336;
+    }
+    #btnNo:hover {
+      background-color: #d32f2f;
+    }
+
+    /* Estilo de las imágenes animadas a los costados */
+    .side-image {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 300px; /* Imagen más grande */
+      opacity: 0.8;
+      animation: moveSide 5s infinite ease-in-out; /* Movimiento más rápido */
+    }
+    .side-image.left {
+      left: 5%; /* Más cerca del texto */
+    }
+    .side-image.right {
+      right: 5%; /* Más cerca del texto */
+    }
+
+    @keyframes moveSide {
+      0% {
+        transform: translateY(-50%) translateX(0); /* Empieza más cerca del centro */
+      }
+      50% {
+        transform: translateY(-50%) translateX(30px); /* Movimiento sutil más rápido */
+      }
+      100% {
+        transform: translateY(-50%) translateX(0); /* Regresa al centro */
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Imagen a la izquierda -->
+  <img src="img/evelyn.jpg" alt="Imagen izquierda" class="side-image left" />
+  
+  <!-- Imagen a la derecha -->
+  <img src="img/ISA.jpg" alt="Imagen derecha" class="side-image right" />
+  
+  <!-- Contenedor principal -->
+  <div id="container">
+    <h1>Palabras de Amor para Ti 💖</h1>
+    <p>Antes de que contestes, quiero compartir lo que siento...</p>
+    <div class="mensaje">
+      <p>"Eres mi renegona , mi brujita, mi carita de niña, mi psicóloga favorita y más. Me haces sentir especial y afortunado cada día. Te quiero con todo mi corazón y me gustaría compartir mi vida contigo. ¿Me acompañas en este viaje?"</p>
+    </div>
+    <p>¿Quieres ser mi novia? 💕</p>
+    <div id="buttons">
+      <button onclick="aceptarOferta()">Sí, quiero ser tu novia</button>
+      <button id="btnNo" onclick="rechazarOferta()">No</button>
+    </div>
+  </div>
+
+  <script>
+    function aceptarOferta() {
+      alert("¡Ahora somos novios! ❤️");
+      window.location.href = "felices_juntos.html"; // Redirige a una página de confirmación
+    }
+
+    function rechazarOferta() {
+      alert("Espero que puedas reconsiderarlo, siempre estaré aquí para ti. 😊");
+      window.location.href = "index.html"; // Redirige al índice inicial
+    }
+  </script>
+</body>
+</html>

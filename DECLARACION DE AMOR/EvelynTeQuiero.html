@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¿Quieres ser mi novia?</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f3f3f3;
+      font-family: Arial, sans-serif;
+    }
+    #declaracion-amor {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    #declaracion-amor p {
+      font-size: 20px;
+      color: #555;
+    }
+    #container {
+      text-align: center;
+    }
+    h1 {
+      font-size: 32px;
+      color: #333;
+    }
+    #buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 18px;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #btnNo {
+      background-color: #f44336;
+    }
+    #btnNo:hover {
+      background-color: #d32f2f;
+    }
+    img {
+      margin-top: 30px;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div id="declaracion-amor">
+    <p>Hola Mi renegona preciosa !!!, mi brujita, mi carita de niña, mi psicóloga...<br>
+    cada uno de tus gestos y locuras hacen que me enamore más de ti cada día. ❤️<br>
+    quiero completar mi felicidad con...</p>
+  </div>
+
+  <div id="container">
+    <h1>¿Quieres ser mi novia?</h1>
+    <div id="buttons">
+      <!-- Botón para decir "Sí" -->
+      <button onclick="accionParaCuandoEllaDigaQueSi()" id="btnSi">Sí</button>
+      
+      <!-- Botón para decir "No", que se mueve al intentar hacer clic -->
+      <button id="btnNo" onmouseover="mueveElBoton()">No</button>
+    </div>
+    
+    <!-- Imagen vinculada al archivo en la carpeta 'img' -->
+    <img src="img/1.jpg" alt="Un mensaje romántico" width="200">
+  </div>
+
+  <script>
+    // Acción al hacer clic en el botón "Sí"
+    function accionParaCuandoEllaDigaQueSi() {
+      const respuesta = confirm("¿Estás segura de querer ser mi novia?");
+      if (respuesta) {
+        alert("¡Ahora ya somos novios! ❤️");
+        window.location.href = "opcionsi.html"; // Redirige a una página adicional si existe
+      } else {
+        alert("Espero que puedas reconsiderarlo 😊");
+      }
+    }
+
+    // Mover el botón "No" al acercar el cursor
+    function mueveElBoton() {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+
+      const newWidth = Math.random() * (width - 100); // Evitar que salga del borde
+      const newHeight = Math.random() * (height - 50); // Evitar que salga del borde
+
+      const btnNo = document.getElementById("btnNo");
+      btnNo.style.position = "absolute";
+      btnNo.style.left = newWidth + "px";
+      btnNo.style.top = newHeight + "px";
+    }
+  </script>
+</body>
+</html>
