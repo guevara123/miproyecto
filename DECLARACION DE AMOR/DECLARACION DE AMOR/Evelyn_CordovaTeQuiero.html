@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¿Quieres ser mi novia?</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #fce4ec;
+      font-family: 'Arial', sans-serif;
+      background-image: url('img/1.jpg'); /* Cambia la ruta por la de tu imagen */
+      background-size: 50%; /* Ajusta el tamaño de la imagen a un 50% */
+      background-position: center;
+      background-repeat: no-repeat; /* Evita que se repita la imagen */
+    }
+    #container {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 600px;
+    }
+    h1 {
+      font-size: 36px;
+      color: #e91e63;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 20px;
+      color: #555;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #btnNo {
+      background-color: #f44336;
+    }
+    #btnNo:hover {
+      background-color: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>¿Quieres ser mi novia?</h1>
+    <p>Antes de contestar, ¿quieres escuchar algo bonito? 💖</p>
+    <div id="buttons">
+      <button id="btnSi" onclick="irAPalabrasDeAmor()">Sí</button>
+      <button id="btnNo">No</button>
+    </div>
+  </div>
+
+  <script>
+    function irAPalabrasDeAmor() {
+      window.location.href = "MiDeclaracionDeAmor.html"; // Enlaza a la página con las palabras de amor
+    }
+  </script>
+</body>
+</html>
